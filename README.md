@@ -33,7 +33,7 @@ cd js/
 node step1_create_wallet.js
 ```
 
-実行すると、account[0] でウォレットのコントラクトをデプロイします。 
+実行すると、account[0] でウォレットのコントラクトをデプロイします。  
 その結果、以下の変化が発生します。Ganache上で確認してください。
 - ACCOUNTS タブ: account[0] は GAS 及びトランザクションフィーを消費し、0.02 ETH ほど残高が減ります。
 - BLOCKS タブ: BLOCK 1 が増えています。BLOCK 1 をクリックするとトランザクションが１つ含まれ、それが CONTRACT CREATION であることがわかります。 
@@ -60,7 +60,7 @@ node step2_deposit.js
 
 ### 4. ウォレットから出金
 
-ウォレットから account[0] に 1 ETH 送金します。 
+ウォレットから account[0] に 1 ETH 送金します。  
 出金の際は multisig を利用します。
 
 ```
@@ -69,3 +69,9 @@ node step3_withdraw.js
 
 - BLOCK タブ: BLOCK 3 が生成され、CONTRACT CALL トランザクションが記録され、
 今回はコントラクトのメソッド呼び出しのため、VALUE は 0 で、TXDATA にバイナリ化されたメソッド呼び出しデータが含まれています。
+
+## contract/WalletSimple.sol について
+
+このウォレットをサンプル実行以外の目的で使用しないでください。  
+オリジナルはこちら https://github.com/BitGo/eth-multisig-v2 です。  
+Solidity 0.5.0 で使える機能を利用するためプログラムを改変していますが、セキュリティの問題なく正しく動作することを確認したわけではありません。
