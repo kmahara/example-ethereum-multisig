@@ -4,8 +4,6 @@
   "description": "",
   "main": "test.js",
   "dependencies": {
-    "async": "^3.2.0",
-    "aysnc": "0.0.1-security",
     "bn": "^1.0.5",
     "ethereumjs-abi": "^0.6.8",
     "ethereumjs-util": "^6.2.0",
